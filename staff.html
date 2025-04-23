@@ -12,6 +12,8 @@
         min-height: 100vh;
         padding: 1rem;
         color: white;
+        flex-shrink: 0;
+        overflow-y: auto;
       }
 
       .profile-img {
@@ -56,40 +58,36 @@
     </nav>
     
     
-    <main class="container-fluid my-5">
-      <div class="row">
-        <!-- Collapsible Sidebar -->
-        <div class="col-md-3 col-12 sidebar">
-          <h5 class="text-white d-none d-md-block">Meet Our Staff</h5>
+    <main class="d-flex flex-row" style="min-height: 100vh;">
+      <!-- Sidebar -->
+      <div class="sidebar d-flex flex-column">
+        <h5 class="text-white">Meet Our Staff</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('president')">Our Company President</button></li>
+          <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('directors')">Directors/Officers</button></li>
+          <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('grants')">Grant Operators</button></li>
+          <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('loans')">Direct Loan Operators</button></li>
+          <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('compliance')">Compliance</button></li>
+          <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('cash')">Cash Management</button></li>
+          <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('tech')">Technology</button></li>
+        </ul>
+        <p class="mt-5">
+          GEMCOR, Inc.<br>
+          1005 Internationale Pkwy<br>
+          Suite 204, Woodridge, Illinois<br>
+          60517<br><br>
+          1-888-GEMCOR-8
+        </p>
+      </div>
+    
+      <!-- Content -->
+      <div class="flex-grow-1 p-3" style="overflow-y: auto;">
+        <!-- Your dynamic content sections (e.g., president, directors, etc.) go here -->
+      </div>
+    </main>
+    
 
-          <!-- Toggle Button (visible only on mobile) -->
-          <button class="btn btn-outline-light w-100 d-md-none mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-expanded="false" aria-controls="sidebarMenu">
-            ☰ Menu
-          </button>
 
-          <!-- Collapsible Menu -->
-          <div class="collapse d-md-block" id="sidebarMenu">
-            <ul class="nav flex-column">
-              <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('president')">Our Company President</button></li>
-              <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('directors')">Directors/Officers</button></li>
-              <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('grants')">Grant Operators</button></li>
-              <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('loans')">Direct Loan Operators</button></li>
-              <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('compliance')">Compliance</button></li>
-              <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('cash')">Cash Management</button></li>
-              <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('tech')">Technology</button></li>
-            </ul>
-
-            <p class="mt-4">
-              GEMCOR, Inc.<br>
-              1005 Internationale Pkwy<br>
-              Suite 204, Woodridge, Illinois<br>
-              60517<br><br>
-              1-888-GEMCOR-8
-            </p>
-          </div>
-        </div>
-
-        
         <div class="col-md-9">
           <!-- Staff Section Header -->
           <div class="text-center my-4">
