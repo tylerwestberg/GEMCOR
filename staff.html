@@ -7,17 +7,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
-
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom d-flex justify-content-center nav-center">
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom flex-column align-items-center">
     <a class="navbar-brand mb-3" href="index.html">
       <img src="Pics/GemcorLogoAndNumber.png" alt="GEMCOR Logo" style="max-height: 100px;">
     </a>
     <div class="collapse navbar-collapse show justify-content-center">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav flex-wrap justify-content-center">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="staff.html">Meet Our Staff</a></li>
         <li class="nav-item"><a class="nav-link" href="testimonals.html">Client Testimonials</a></li>
@@ -32,12 +29,10 @@
     </div>
   </nav>
 
-
   <div class="container-fluid py-5">
     <div class="row">
-      <!-- Sidebar Department Nav -->
-      <div class="col-md-3 sidebar-nav">
-        <div class="list-group">
+      <div class="col-lg-3 mb-4 mb-lg-0">
+        <div class="list-group sticky-top">
           <button class="list-group-item list-group-item-action active" onclick="showSection('president')">Our President</button>
           <button class="list-group-item list-group-item-action" onclick="showSection('directors')">Directors/Officers</button>
           <button class="list-group-item list-group-item-action" onclick="showSection('grants')">Grant Operators</button>
@@ -47,9 +42,7 @@
           <button class="list-group-item list-group-item-action" onclick="showSection('tech')">Technology</button>
         </div>
       </div>
-
-      <!-- Main Content Area -->
-      <div class="col-md-9">
+      <div class="col-lg-9" id="staff-content">
         <!-- PRESIDENT -->
         <div id="president" class="staff-section">
           <h2>Our President</h2>
@@ -306,26 +299,20 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 
   <footer class="footer-custom text-white py-5">
     <div class="container">
-      <div class="row align-items-start">
-        
-        <!-- Left Side: Company Info -->
+      <div class="row">
         <div class="col-md-6 text-md-start text-center mb-4 mb-md-0">
           <p class="mb-1">&copy; 2025 GEMCOR, Inc. All rights reserved.</p>
           <p class="mb-1">1005 Internationale Pkwy Suite 204, Woodridge, IL 60517</p>
           <p class="mb-0">1-888-GEMCOR-8</p>
         </div>
-
-        <!-- Right Side: Nav Links in Two Columns -->
         <div class="col-md-6">
           <div class="row">
-            <!-- First 5 links -->
             <div class="col-6 text-md-end text-center">
               <ul class="list-unstyled footer-nav">
                 <li><a href="index.html">Home</a></li>
@@ -335,19 +322,17 @@
                 <li><a href="testimonals.html">Client Testimonials</a></li>
               </ul>
             </div>
-            <!-- Last 4 links -->
             <div class="col-6 text-md-start text-center">
               <ul class="list-unstyled footer-nav">
                 <li><a href="links.html">Links</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="https://auth.sharefile.io/gemcorinc/login?returnUrl=%2fconnect%2fauthorize%2fcallback%3fclient_id%3dDzi4UPUAg5l8beKdioecdcnmHUTWWln6%26state%3d9pMryo98PClWn_pHS7108Q--%26acr_values%3dtenant%253Agemcorinc%26response_type%3dcode%26redirect_uri%3dhttps%253A%252F%252Fgemcorinc.sharefile.com%252Flogin%252Foauthlogin%26scope%3dsharefile%253Arestapi%253Av3%2520sharefile%253Arestapi%253Av3-internal%2520offline_access%2520openid" target="_blank">ShareFile</a></li>
+                <li><a href="https://auth.sharefile.io/gemcorinc/login?..." target="_blank">ShareFile</a></li>
                 <li><a href="https://team.gemcorinc.com/" target="_blank">TEAM Web</a></li>
               </ul>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </footer>

@@ -4,10 +4,11 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  word-wrap: break-word;
 }
 
 .carousel-inner {
-  max-height: 400px;
   overflow: hidden;
 }
 
@@ -16,23 +17,12 @@ body {
 }
 
 .carousel-item img {
-  height: 400px;
   width: 100%;
+  height: auto;
+  max-height: 400px;
   object-fit: contain;
   background-color: #f8f9fa;
 }
-
-.contact-info-bg {
-  background-color: #f8f9fa; /* or any color you want */
-}
-
-
-
-.card-section-bg {
-  background-color: #f8f9fa;
-  padding: 3rem 0;
-}
-
 
 .hero {
   padding: 6rem 1rem;
@@ -49,6 +39,11 @@ body {
 .hero p {
   font-size: 1.2rem;
   color: #555;
+}
+
+.card-section-bg {
+  background-color: #f8f9fa;
+  padding: 3rem 0;
 }
 
 .feature-card {
@@ -87,8 +82,6 @@ body {
   text-decoration: underline;
 }
 
-
-
 .navbar-custom {
   background-color: #771914;
   padding-top: 1rem;
@@ -116,4 +109,29 @@ body {
 
 .navbar-nav .nav-link:hover {
   color: #ddd;
+}
+
+/* Responsive Mobile Fixes */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .carousel-item img {
+    max-height: 250px;
+  }
+
+  .footer-nav {
+    text-align: center;
+  }
 }
