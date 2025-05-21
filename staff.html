@@ -1,118 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Meet Our Staff</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-      .sidebar {
-        background-color: #333;
-        width: 250px;
-        min-height: 100vh;
-        padding: 1rem;
-        color: white;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet Our Staff</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom d-flex justify-content-center nav-center">
+    <a class="navbar-brand mb-3" href="index.html">
+      <img src="Pics/GemcorLogoAndNumber.png" alt="GEMCOR Logo" style="max-height: 100px;">
+    </a>
+    <div class="collapse navbar-collapse show justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="staff.html">Meet Our Staff</a></li>
+        <li class="nav-item"><a class="nav-link" href="testimonals.html">Client Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="software.html">Software</a></li>
+        <li class="nav-item"><a class="nav-link" href="downloads.html">Downloads</a></li>
+        <li class="nav-item"><a class="nav-link" href="links.html">Links</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://auth.sharefile.io/gemcorinc/login..." target="_blank">ShareFile</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://team.gemcorinc.com/" target="_blank">TEAM Web</a></li>
+      </ul>
+    </div>
+  </nav>
 
-      .profile-img {
-        max-width: 200px;
-        height: auto;
-        border-radius: 5px;
-      }
 
-      .nav-tabs .nav-link {
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-    <header style="background-color: #771914;" class="text-center py-3">
-      <img src="GemcorLogoAndNumber.png" alt="GEMCOR Logo" style="max-height: 150px;" />
-    </header>  
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="GEMCOR_LogoAndNameOnly.png" alt="GEMCOR Logo" style="height: 40px;">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="staff.html">Meet Our Staff</a></li>
-            <li class="nav-item"><a class="nav-link" href="webinars.html">Webinars</a></li>
-            <li class="nav-item"><a class="nav-link" href="software.html">Software</a></li>
-            <li class="nav-item"><a class="nav-link" href="downloads.html">Downloads</a></li>
-            <li class="nav-item"><a class="nav-link" href="links.html">Links</a></li>
-            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://auth.sharefile.io/gemcorinc/login..." target="_blank">ShareFile</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://team.gemcorinc.com/" target="_blank">TEAM Web</a></li>
-          </ul>
+  <div class="container-fluid py-5">
+    <div class="row">
+      <!-- Sidebar Department Nav -->
+      <div class="col-md-3 sidebar-nav">
+        <div class="list-group">
+          <button class="list-group-item list-group-item-action active" onclick="showSection('president')">Our President</button>
+          <button class="list-group-item list-group-item-action" onclick="showSection('directors')">Directors/Officers</button>
+          <button class="list-group-item list-group-item-action" onclick="showSection('grants')">Grant Operators</button>
+          <button class="list-group-item list-group-item-action" onclick="showSection('loans')">Direct Loan Operators</button>
+          <button class="list-group-item list-group-item-action" onclick="showSection('compliance')">Compliance</button>
+          <button class="list-group-item list-group-item-action" onclick="showSection('cash')">Cash Management</button>
+          <button class="list-group-item list-group-item-action" onclick="showSection('tech')">Technology</button>
         </div>
       </div>
-    </nav>
-    
-    
-    <main class="container-fluid my-5">
-      <div class="row">
-        <!-- Collapsible Sidebar -->
-        <div class="col-md-3 col-12 sidebar">
-          <h5 class="text-white d-none d-md-block">Meet Our Staff</h5>
 
-          <!-- Toggle Button (visible only on mobile) -->
-          <button class="btn btn-outline-light w-100 d-md-none mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-expanded="false" aria-controls="sidebarMenu">
-            ☰ Departments
-          </button>
-
-          <!-- Collapsible Menu -->
-          <div class="collapse d-md-block" id="sidebarMenu">
-            <ul class="nav flex-column">
-              <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('president')">Our Company President</button></li>
-              <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('directors')">Directors/Officers</button></li>
-              <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('grants')">Grant Operators</button></li>
-              <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('loans')">Direct Loan Operators</button></li>
-              <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('compliance')">Compliance</button></li>
-              <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('cash')">Cash Management</button></li>
-              <li class="nav-item"><button class="nav-link text-white btn btn-link" onclick="showSection('tech')">Technology</button></li>
-            </ul>
-
-            <p class="mt-4">
-              GEMCOR, Inc.<br>
-              1005 Internationale Pkwy<br>
-              Suite 204, Woodridge, Illinois<br>
-              60517<br><br>
-              1-888-GEMCOR-8
-            </p>
-          </div>
-        </div>
-
-        
-        <div class="col-md-9">
-          <!-- Staff Section Header -->
-          <div class="text-center my-4">
-            <h2 class="fw-bold">Meet the Department Staff at</h2>
-            <img src="GEMCOR_LogoAndNameOnly.png" alt="GEMCOR Logo" style="height: 100px !important; width: auto;" />
-          </div>
-
-          <!-- President Section -->
-          <section id="president">
-            <h2>Our Company President</h2>
-            <ul class="nav nav-tabs mb-3">
-              <li class="nav-item">
-                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#don" type="button">Don Grybas</button>
-              </li>
-            </ul>
-            <div class="tab-content">
-              <div class="tab-pane fade show active bg-dark text-white p-4" id="don">
-                <div class="row align-items-start">
-                  <div class="col-md-3 text-center mb-3 mb-md-0">
-                    <img src="Don.png" alt="Don Grybas" class="img-fluid rounded" style="max-height: 250px;">
-                  </div>
-                  <div class="col-md-9">
-                    <p><strong>Please contact Don Grybas directly for information regarding:</strong></p>
+      <!-- Main Content Area -->
+      <div class="col-md-9">
+        <!-- PRESIDENT -->
+        <div id="president" class="staff-section">
+          <h2>Our President</h2>
+          <ul class="nav nav-tabs mb-3" role="tablist">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#don-tab">Don Grybas</button></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="don-tab">
+              <div class="profile-card d-flex align-items-center">
+                <img src="Pics\Don.jpg" alt="Don Grybas" class="profile-img me-4">
+                <div>
+                  <h4>Don Grybas - President</h4>
+                  <p><strong>Please contact Don Grybas directly for information regarding:</strong></p>
                     <ul>
                       <li>Marketing</li>
                       <li>New school applicants</li>
@@ -125,193 +72,291 @@
                       <li>Client consulting/training</li>
                       <li>General business management/contracts</li>
                     </ul>
-                  </div>
-                </div>
-                <p><strong>Don Grybas, President</strong> — has a degree in public accounting from DePaul University in Chicago, and has had extensive training in business management and computer operations. He began his career in the federal student aid industry in 1982 as a staff accountant with Student Financial Aid Services, Inc. During the next nine years with this firm, he progressed through several positions including: Accounting Manager, Operations Director, and Vice President. In 1991 he purchased the company, and subsequently changed the corporate name to GEMCOR, Inc.</p>
-                <p>As the company's president, Don is responsible for all executive level decisions, regulation interpretation, marketing and public relations. In addition to his "in-house" responsibilities, Don regularly represents the company at various national and regional trade shows and education conferences on various areas of federal student aid administration, and also conducts the company's annual client training seminars. His past experience as an accreditation evaluator, and his degree in accounting, also give him the unique experience to provide the advisory services to his clients in school administration and financial responsibility matters, in addition to financial aid administration and computer operations.</p>
-                <hr style="border-color: #888; margin: 1.5rem 0;">
-                <div class="contact-info">
-                  <p><strong>Name:</strong> Don Grybas</p>
-                  <p><strong>Title:</strong> President</p>
+                  <p><strong>Don Grybas</strong> — has a degree in public accounting from DePaul University in Chicago, and has had extensive training in business management and computer operations. He began his career in the federal student aid industry in 1982 as a staff accountant with Student Financial Aid Services, Inc. During the next nine years with this firm, he progressed through several positions including: Accounting Manager, Operations Director, and Vice President. In 1991 he purchased the company, and subsequently changed the corporate name to GEMCOR, Inc.</p>
+                  <p>As the company's president, Don is responsible for all executive level decisions, regulation interpretation, marketing and public relations. In addition to his "in-house" responsibilities, Don regularly represents the company at various national and regional trade shows and education conferences on various areas of federal student aid administration, and also conducts the company's annual client training seminars. His past experience as an accreditation evaluator, and his degree in accounting, also give him the unique experience to provide the advisory services to his clients in school administration and financial responsibility matters, in addition to financial aid administration and computer operations.</p>
                   <p><strong>Phone:</strong> 1-888-GEMCOR-8 ext: 221</p>
-                  <p><strong>Email:</strong> <a href="mailto:don@gemcorinc.com" class="text-white">don@gemcorinc.com</a></p>
+                  <p><strong>Email:</strong> <a href="mailto:don@gemcorinc.com" class="text-dark">don@gemcorinc.com</a></p>
                 </div>
               </div>
-          </section>
-
-          <!-- Directors/Officers Section -->
-          <section id="directors" style="display: none;">
-            <h2>Directors/Officers</h2>
-            <ul class="nav nav-tabs mb-3">
-              <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#steve" type="button">Steve Berry</button></li>
-              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#laurie" type="button">Laurie Westberg</button></li>
-              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#megan" type="button">Megan Refness</button></li>
-            </ul>
-            <div class="tab-content">
-              <div class="tab-pane fade show active bg-dark text-white p-4" id="steve">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Smiley.svg" alt="Steve Berry" class="profile-img mb-3">
-                <p><strong>Steve Berry, Vice President</strong> — began his financial aid career as a financial aid officer in 1988 in the corporate office of a multi-campus chain of schools in the Chicagoland area. Steve’s dependability, knowledge, and work ethic eventually resulted in his promoted to the position of financial aid director for all campuses in the organization. He later took that experience and joined GEMCOR in 1992 as a senior financial aid administrator. Over the course of his decades of service to GEMCOR and its client institutions, Steve has held several titles including Office Manager, Director, and since the early 2000’s as Vice President of Operations.</p>
-                <p>As Vice President, Steve’s duties include general office management, technical support and training for clients and staff, and daily management of GEMCOR’s grant processing and accounting departments. Steve juggles those responsibilities along with management of client SAIG accounts, and audit and program review consulting, not to mention general daily FSA Q&A support. Steve’s five decades of FSA administration is unparalleled in most parts of the industry.</p>
-                <p>Phone: 1-888-GEMCOR-8 ext: 222<br>Email: <a href="mailto:laurie@gemcorinc.com" class="text-white">laurie@gemcorinc.com</a></p>
-              </div>
-              <div class="tab-pane fade bg-dark text-white p-4" id="laurie">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Smiley.svg" alt="Laurie Westberg" class="profile-img mb-3">
-                <p><strong>Laurie Westberg, Chief Information Officer</strong> — Information Technology and Computer Operations are the life blood of most companies, and Laurie Westberg is our doctor! Laurie began writing code for GEMCOR in 1996, and today she functions as the company’s Chief Information Officer with a Master's degree in computer science from Governors State University. She was largely responsible for transitioning the company to full automation during her tenure at GEMCOR. She provides daily oversight of all computer operations and systems involved with our TEAM and Trax Software Applications.</p>
-                <p>In addition to her programming skills and website development and maintenance responsibilities, Laurie also manages all hardware systems, phone systems, remote accessibility, and data backup and security operations. Highly experienced in VB, .NET, and C++, Laurie’s been an “A+” asset to GEMCOR from day one. Laurie is committed to making sure everyone is functionally "Having a Great Day at GEMCOR" every day!</p>
-                <p>Phone: 1-888-GEMCOR-8 ext: 223<br>Email: <a href="mailto:steve@gemcorinc.com" class="text-white">steve@gemcorinc.com</a></p>
-              </div>
-              <div class="tab-pane fade bg-dark text-white p-4" id="megan">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Smiley.svg" alt="Megan Refness" class="profile-img mb-3">
-                <p><strong>Megan Refness, Director of Federal Direct Student Loan</strong> — As is the case with many of us, Megan began working in the industry with a limited knowledge of the administrative requirements involved in the federal student financial aid environment. Megan joined GEMCOR in 2005 as an administrative assistant and quickly developed the skills and knowledge to elevate her job responsibilities into that of a staff loan processor. Throughout the ensuing several years, Megan expanded her understanding of the statutes, regulations, and requirements regarding the federal student loan programs.</p>
-                <p>In 2010, lenders and guarantee agencies were eliminated from the federal student loan industry through federal legislation. Subsequent to that was the massive expansion of the Federal Direct Student Loan program (FDSL). Immediately, Megan welcomed the opportunity to manage this expanding department within GEMCOR. Currently, Megan and her FDSL department staff process and manage student loan volume of approximately $100 million annually, as well as providing client training and support. Her now longtime experience in the world of federal aid administration along with her teamwork mentality in any other area of client services, make her a trusted and respected associate in the eyes of all of our clients.</p>
-                <p>Phone: 1-888-GEMCOR-8 ext: 225<br>Email: <a href="mailto:megan@gemcorinc.com">megan@gemcorinc.com</a></p>
-              </div>
             </div>
-          </section>
-
-          <!-- Grant Operators Section -->
-          <section id="grants" style="display: none;">
-            <h2>Grant Operators</h2>
-            <ul class="nav nav-tabs mb-3">
-              <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#steveg" type="button">Steve Berry</button></li>
-              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#niki" type="button">Niki Mazur</button></li>
-            </ul>
-            <div class="tab-content">
-              <div class="tab-pane fade show active bg-dark text-white p-4" id="steveg">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Smiley.svg" alt="Steve Berry" class="profile-img mb-3">
-                <p><strong>Steve Berry, Vice President</strong> — began his financial aid career as a financial aid officer in 1988 in the corporate office of a multi-campus chain of schools in the Chicagoland area. Steve’s dependability, knowledge, and work ethic eventually resulted in his promoted to the position of financial aid director for all campuses in the organization. He later took that experience and joined GEMCOR in 1992 as a senior financial aid administrator. Over the course of his decades of service to GEMCOR and its client institutions, Steve has held several titles including Office Manager, Director, and since the early 2000’s as Vice President of Operations.</p>
-                <p>As Vice President, Steve’s duties include general office management, technical support and training for clients and staff, and daily management of GEMCOR’s grant processing and accounting departments. Steve juggles those responsibilities along with management of client SAIG accounts, and audit and program review consulting, not to mention general daily FSA Q&A support. Steve’s five decades of FSA administration is unparalleled in most parts of the industry.</p>
-                <p>Phone: 1-888-GEMCOR-8 ext: 222<br>Email: <a href="mailto:laurie@gemcorinc.com" class="text-white">laurie@gemcorinc.com</a></p>
-              </div>
-              <div class="tab-pane fade bg-dark text-white p-4" id="niki">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Smiley.svg" alt="Niki Mazur" class="profile-img mb-3">
-                <p><strong>Niki Mazur, Administrative Assistant</strong> — brings a well-rounded background of school administrative experience to GEMCOR. Prior to becoming a GEMCOR associate, she spent ten years as a financial aid director of a FSA eligible school in northern Illinois. But as is the case at many small schools, her duties did not stop there as she also balanced her time with being an administrator and instructor. Having been on the receiving end of accreditation reviews and site visits, she brings that unique experience to the table as well.</p>
-                <p>Her primary responsibilities at GEMCOR include federal grant award processing, Sharefile document management, confirmation of eligibility file reviews, and she also often assists with fund reconciliation in the Accounting Department.</p>
-                <p>Phone: 1-888-GEMCOR-8 ext: 232<br>Email: <a href="mailto:niki@gemcorinc.com" class="text-white">niki@gemcorinc.com</a></p>
-              </div>
-            </div>
-          </section>
-
-          <!-- Direct Loan Operators Section -->
-          <section id="loans" style="display: none;">
-            <h2>Direct Loan Operators</h2>
-            <ul class="nav nav-tabs mb-3">
-              <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#meganLoan" type="button">Megan Refness</button></li>
-              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#micheleLoan" type="button">Michele Campbell</button></li>
-            </ul>
-            <div class="tab-content">
-              <div class="tab-pane fade show active bg-dark text-white p-4" id="meganLoan">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Smiley.svg" alt="Megan Refness" class="profile-img mb-3">
-                <p><strong>Megan Refness, Director of Federal Direct Student Loan</strong> — As is the case with many of us, Megan began working in the industry with a limited knowledge of the administrative requirements involved in the federal student financial aid environment. Megan joined GEMCOR in 2005 as an administrative assistant and quickly developed the skills and knowledge to elevate her job responsibilities into that of a staff loan processor. Throughout the ensuing several years, Megan expanded her understanding of the statutes, regulations, and requirements regarding the federal student loan programs.</p>
-                <p>In 2010, lenders and guarantee agencies were eliminated from the federal student loan industry through federal legislation. Subsequent to that was the massive expansion of the Federal Direct Student Loan program (FDSL). Immediately, Megan welcomed the opportunity to manage this expanding department within GEMCOR. Currently, Megan and her FDSL department staff process and manage student loan volume of approximately $100 million annually, as well as providing client training and support. Her now longtime experience in the world of federal aid administration along with her teamwork mentality in any other area of client services, make her a trusted and respected associate in the eyes of all of our clients.</p>
-                <p>Phone: 1-888-GEMCOR-8 ext: 225<br>Email: <a href="mailto:megan@gemcorinc.com" class="text-white">megan@gemcorinc.com</a></p>
-              </div>
-              <div class="tab-pane fade bg-dark text-white p-4" id="micheleLoan">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Smiley.svg" alt="Michele Campbell" class="profile-img mb-3">
-                <p><strong>Michele Campbell, Federal Direct Student Loan</strong> — Michele joined GEMCOR as an Administrative Assistant in March 2009 when her primary duties involved daily data processing and general office support. In 2010, after Congress eliminated the FFEL program in favor of Direct Loans, she shared time as an administrator in general operations as well as in the newly formed FDSL Department at GEMCOR. Volume quickly grew and before long she spent all of her time and effort assisting clients in the transition to the expanding Federal Direct Student Loan program.</p>
-                <p>Today, Michele is a Senior Loan Operator overseeing the daily processing of FDSL loan awards from GEMCOR client institutions. Her now vast knowledge of the FDSL program affords her the ability to assist clients in virtually any area involving student eligibility for Federal Direct Student Loans. Michele and Megan combine to offer the best possible management of your FDSL program activity.</p>
-                <p>Phone: 1-888-GEMCOR-8 ext: 229<br>Email: <a href="mailto:michele@gemcorinc.com" class="text-white">michele@gemcorinc.com</a></p>
-              </div>
-            </div>
-          </section>
-
-          <!-- Compliance Section -->
-          <section id="compliance" style="display: none;">
-            <h2>Compliance</h2>
-            <ul class="nav nav-tabs mb-3">
-              <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#jacki" type="button">Jacki Griffin</button></li>
-              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#sue" type="button">Sue Berry</button></li>
-              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#nikiC" type="button">Niki Mazur</button></li>
-            </ul>
-            <div class="tab-content">
-              <div class="tab-pane fade show active bg-dark text-white p-4" id="jacki">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Smiley.svg" alt="Jacki Griffin" class="mb-3 profile-img" />
-                <p><strong>Jacki Griffin, Verification</strong> — Jacki has been involved with federal aid administration at GEMCOR since 2010, and has become the most trusted and reliable source there is for verification and C code compliance matters. Her service to our clients through the Compliance Department includes daily examination of verification and C code related student eligibility issues. Her experience is also a value regarding cases of professional judgment, dependency overrides, and proof of high school graduation. Jacki is your #1 go-to for pre-packaging guidance and professional support in the areas of FAFSAs, ISIR corrections, and many issues surrounding file compliance.</p>
-                <p>Phone: 1-888-GEMCOR-8 ext: 224<br>Email: <a href="mailto:jacki@gemcorinc.com" class="text-white">jacki@gemcorinc.com</a></p>
-              </div>
-              <div class="tab-pane fade bg-dark text-white p-4" id="sue">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Smiley.svg" alt="Sue Berry" class="mb-3 profile-img" />
-                <p><strong>Sue Berry, Administrative Assistant</strong> — Sue Berry began her career in FSA administration in 2011. In the unique industry that is FSA administration, your job duties evolve with your skills and experience. Sue's skills at program management, organization, and professionalism are equally matched by her patience and compassion helping clients through a number of painstaking obligations. As a Compliance Officer at GEMCOR, her primary responsibilities include periodic file reviews to confirm student eligibility for FSA funds based on documents provided to GEMCOR by the schools.</p>
-                <p>Together, with the school's input, Sue can help provide a higher level of assurance that on-campus functions are being performed in a compliant manner. In other student file related matters, Sue provides support with verification and C code reviews and approvals, and technical support regarding Sharefile secure document portal functionality. Sue is also the lead go to person regarding NSLDS reporting. She routinely assist clients in the timely and accurate updating of the bi-monthly reports for the National Student Loan Data System (NSLDS) formerly the student status confirmation report (SSCR). This national database must be accurate to stay in compliance with Title IV Program participation. NSLDS provides a centralized, integrated view of Title IV loans and grants during their complete life cycle, from aid approval through disbursement, repayment, deferment, delinquency, and closure, and Sue is an expert NSLDS navigator.</p>
-                <p>Phone: 1-888-GEMCOR-8 ext: 231<br>Email: <a href="mailto:sue@gemcorinc.com" class="text-white">sue@gemcorinc.com</a></p>
-              </div>
-              <div class="tab-pane fade bg-dark text-white p-4" id="nikiC">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Smiley.svg" alt="Niki Mazur" class="mb-3 profile-img" />
-                <p><strong>Niki Mazur, Administrative Assistant</strong> — brings a well-rounded background of school administrative experience to GEMCOR. Prior to becoming a GEMCOR associate, she spent ten years as a financial aid director of a FSA eligible school in northern Illinois. But as is the case at many small schools, her duties did not stop there as she also balanced her time with being an administrator and instructor. Having been on the receiving end of accreditation reviews and site visits, she brings that unique experience to the table as well.</p>
-                <p>Her primary responsibilities at GEMCOR include federal grant award processing, Sharefile document management, confirmation of eligibility file reviews, and she also often assists with fund reconciliation in the Accounting Department.</p>
-                <p>Phone: 1-888-GEMCOR-8 ext: 232<br>Email: <a href="mailto:niki@gemcorinc.com">niki@gemcorinc.com</a></p>
-              </div>
-            </div>
-          </section>
-
-          <!-- Cash Management Section -->
-          <section id="cash" style="display: none;">
-            <h2>Cash Management</h2>
-            <ul class="nav nav-tabs mb-3">
-              <li class="nav-item">
-                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#carri" type="button">Carri Van Buskirk</button>
-              </li>
-            </ul>
-            <div class="tab-content">
-              <div class="tab-pane fade show active bg-dark text-white p-4" id="carri">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Smiley.svg" alt="Carri Van Buskirk" class="mb-3 profile-img" />
-                <p><strong>Carri Van Buskirk, Cash Management</strong> — has a bachelor's degree in business administration from St. Xavier University in Illinois and started working for GEMCOR in 2010 with a diverse background for customer service and computer systems. She is responsible for the day-to-day G5/cash drawdown request, refunds, return of cash on hand reporting, and troubleshooting G5 for clients. Carri proofs and trains clients for their return of Title IV funds worksheets (R2T4). She processes reconciliations monthly for all clients on their federal funds bank accounts and any necessary changes that need to be made to those accounts via G5.</p>
-                <p>Carri helps with new client G5 user access and G5 federal funds bank account additions. If assistance is needed during a client audit, Carri can provide general audit/program review support.</p>
-                <p>Phone: 1-888-GEMCOR-8 ext: 226<br>Email: <a href="mailto:carri@gemcorinc.com">carri@gemcorinc.com</a></p>
-              </div>
-            </div>
-          </section>
-
-          <!-- Technology Section -->
-          <section id="tech" style="display: none;">
-            <h2>Technology</h2>
-            <ul class="nav nav-tabs mb-3" id="techTab" role="tablist">
-              <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#laurieTech" type="button">Laurie Westberg</button></li>
-              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#terrah" type="button">Terrah Griffin</button></li>
-              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tyler" type="button">Tyler Westberg</button></li>
-            </ul>
-            <div class="tab-content" id="techTabContent">
-              <div class="tab-pane fade show active bg-dark text-white p-4" id="laurieTech">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Smiley.svg" alt="Laurie Westberg" class="mb-3 profile-img" />
-                <p><strong>Laurie Westberg, Chief Information Officer</strong> — Information Technology and Computer Operations are the life blood of most companies, and Laurie Westberg is our doctor! Laurie began writing code for GEMCOR in 1996, and today she functions as the company’s Chief Information Officer with a Master's degree in computer science from Governors State University. She was largely responsible for transitioning the company to full automation during her tenure at GEMCOR. She provides daily oversight of all computer operations and systems involved with our TEAM and Trax Software Applications.</p>
-                <p>In addition to her programming skills and website development and maintenance responsibilities, Laurie also manages all hardware systems, phone systems, remote accessibility, and data backup and security operations. Highly experienced in VB, .NET, and C++, Laurie’s been an “A+” asset to GEMCOR from day one. Laurie is committed to making sure everyone is functionally "Having a Great Day at GEMCOR" every day!</p>
-                <p>Phone: 1-888-GEMCOR-8 ext: 222<br>Email: <a href="mailto:laurie@gemcorinc.com" class="text-white">laurie@gemcorinc.com</a></p>
-              </div>
-              <div class="tab-pane fade bg-dark text-white p-4" id="terrah">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Smiley.svg" alt="Terrah Griffin" class="mb-3 profile-img" />
-                <p><strong>Terrah Griffin, Information Technology & Computer Operations</strong> — Terrah joined GEMCOR in 2010 while completing her bachelor's degree requirements at St. Xavier University in Illinois. As an associate in the Computer Operations and IT Department, Terrah's responsibilities include maintenance of in-house computer applications, client support regarding Trax and TEAM software systems, TEAM user maintenance, email distribution list management, and ShareFile support and user maintenance. Terrah is also responsible for the annual preparation and e-filing of 1098-T data.</p>
-                <p>On a daily basis, Terrah manages all ISIR and XML/COD data exchanges with the Department of Education. She also works in conjunction with IT Department Director, Laurie Westberg on GEMCOR's website, data backup and security, and domain management.</p>
-                <p>Phone: 1-888-GEMCOR-8 ext: 228<br>Email: <a href="mailto:terrah@gemcorinc.com" class="text-white">terrah@gemcorinc.com</a></p>
-              </div>
-              <div class="tab-pane fade bg-dark text-white p-4" id="tyler">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Smiley.svg" alt="Tyler Westberg" class="mb-3 profile-img" />
-                <p><strong>Tyler Westberg, Information Technology Programming Staff</strong> — Tyler joined GEMCOR in 2024 while completing his bachelor's degree requirements. As an associate in the Computer Operations and IT Department, Tyler's responsibilities include maintenance of in-house computer applications, TEAM user maintenance, email distribution list management, and ShareFile support and user maintenance.</p>
-                <p>On a daily basis, Tyler contributes to GEMCOR's in-house programming updates and maintenance. He works in conjunction with the IT Department Director, Laurie Westberg, and Information Systems & Technologies officer Terrah Griffin.</p>
-                <p>Phone: 1-888-GEMCOR-8<br>Email: <a href="mailto:tyler@gemcorinc.com">tyler@gemcorinc.com</a></p>
-              </div>
-            </div>
-          </section>
+          </div>
         </div>
+
+        <!-- DIRECTORS -->
+        <div id="directors" class="staff-section d-none">
+          <h2>Directors/Officers</h2>
+          <ul class="nav nav-tabs mb-3" role="tablist">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#steve-tab">Steve Berry</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#laurie-tab">Laurie Westberg</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#megan-tab">Megan Refness</button></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="steve-tab">
+              <div class="profile-card d-flex align-items-center">
+                <img src="Pics\Steve.jpg" alt="Steve Berry" class="profile-img me-4">
+                <div>
+                  <h3>Steve Berry - Vice President</h3>
+                  <p><strong>Steve Berry</strong> — began his financial aid career as a financial aid officer in 1988 in the corporate office of a multi-campus chain of schools in the Chicagoland area. Steve’s dependability, knowledge, and work ethic eventually resulted in his promoted to the position of financial aid director for all campuses in the organization. He later took that experience and joined GEMCOR in 1992 as a senior financial aid administrator. Over the course of his decades of service to GEMCOR and its client institutions, Steve has held several titles including Office Manager, Director, and since the early 2000’s as Vice President of Operations.</p>
+                  <p>As Vice President, Steve’s duties include general office management, technical support and training for clients and staff, and daily management of GEMCOR’s grant processing and accounting departments. Steve juggles those responsibilities along with management of client SAIG accounts, and audit and program review consulting, not to mention general daily FSA Q&A support. Steve’s five decades of FSA administration is unparalleled in most parts of the industry.</p>
+                  <p>Phone: 1-888-GEMCOR-8 ext: 222<br>Email: <a href="mailto:steve@gemcorinc.com" class="text-dark">steve@gemcorinc.com</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="laurie-tab">
+              <div class="profile-card d-flex align-items-center">
+                <img src="Pics\Laurie.jpg" alt="Laurie Westberg" class="profile-img me-4">
+                <div>
+                  <h3>Laurie Westberg - Chief Information Officer</h3>
+                  <p><strong>Laurie Westberg</strong> — Information Technology and Computer Operations are the life blood of most companies, and Laurie Westberg is our doctor! Laurie began writing code for GEMCOR in 1996, and today she functions as the company’s Chief Information Officer with a Master's degree in computer science from Governors State University. She was largely responsible for transitioning the company to full automation during her tenure at GEMCOR. She provides daily oversight of all computer operations and systems involved with our TEAM and Trax Software Applications.</p>
+                  <p>In addition to her programming skills and website development and maintenance responsibilities, Laurie also manages all hardware systems, phone systems, remote accessibility, and data backup and security operations. Highly experienced in VB, .NET, and C++, Laurie’s been an “A+” asset to GEMCOR from day one. Laurie is committed to making sure everyone is functionally "Having a Great Day at GEMCOR" every day!</p>
+                  <p>Phone: 1-888-GEMCOR-8 ext: 223<br>Email: <a href="mailto:laurie@gemcorinc.com" class="text-dark">laurie@gemcorinc.com</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="megan-tab">
+              <div class="profile-card d-flex align-items-center">
+                <img src="Pics\Megan.jpg" alt="Megan Refness" class="profile-img me-4">
+                <div>
+                  <h3>Megan Refness - Director of Federal Direct Student Loan</h3>
+                  <p><strong>Megan Refness</strong> — As is the case with many of us, Megan began working in the industry with a limited knowledge of the administrative requirements involved in the federal student financial aid environment. Megan joined GEMCOR in 2005 as an administrative assistant and quickly developed the skills and knowledge to elevate her job responsibilities into that of a staff loan processor. Throughout the ensuing several years, Megan expanded her understanding of the statutes, regulations, and requirements regarding the federal student loan programs.</p>
+                  <p>In 2010, lenders and guarantee agencies were eliminated from the federal student loan industry through federal legislation. Subsequent to that was the massive expansion of the Federal Direct Student Loan program (FDSL). Immediately, Megan welcomed the opportunity to manage this expanding department within GEMCOR. Currently, Megan and her FDSL department staff process and manage student loan volume of approximately $100 million annually, as well as providing client training and support. Her now longtime experience in the world of federal aid administration along with her teamwork mentality in any other area of client services, make her a trusted and respected associate in the eyes of all of our clients.</p>
+                  <p>Phone: 1-888-GEMCOR-8 ext: 225<br>Email: <a href="mailto:megan@gemcorinc.com" class="text-dark"> megan@gemcorinc.com</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grant Operators -->
+        <div id="grants" class="staff-section d-none">
+          <h2>Grant Operators</h2>
+          <ul class="nav nav-tabs mb-3" role="tablist">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#steve2-tab">Steve Berry</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#niki-tab">Niki Mazur</button></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="steve2-tab">
+              <div class="profile-card d-flex align-items-center">
+                <img src="Pics\Steve.jpg" alt="Steve Berry" class="profile-img me-4">
+                <div>
+                  <h3>Steve Berry - Vice President</h3>
+                  <p><strong>Steve Berry</strong> — began his financial aid career as a financial aid officer in 1988 in the corporate office of a multi-campus chain of schools in the Chicagoland area. Steve’s dependability, knowledge, and work ethic eventually resulted in his promoted to the position of financial aid director for all campuses in the organization. He later took that experience and joined GEMCOR in 1992 as a senior financial aid administrator. Over the course of his decades of service to GEMCOR and its client institutions, Steve has held several titles including Office Manager, Director, and since the early 2000’s as Vice President of Operations.</p>
+                  <p>As Vice President, Steve’s duties include general office management, technical support and training for clients and staff, and daily management of GEMCOR’s grant processing and accounting departments. Steve juggles those responsibilities along with management of client SAIG accounts, and audit and program review consulting, not to mention general daily FSA Q&A support. Steve’s five decades of FSA administration is unparalleled in most parts of the industry.</p>
+                  <p>Phone: 1-888-GEMCOR-8 ext: 222<br>Email: <a href="mailto:steve@gemcorinc.com" class="text-dark">steve@gemcorinc.com</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="niki-tab">
+              <div class="profile-card d-flex align-items-center">
+                <img src="Pics\Niki.jpg" alt="Niki Mazur" class="profile-img me-4">
+                <div>
+                  <h3>Niki Mazur - Administrative Assistant</h3>
+                  <p><strong>Niki Mazur</strong> — brings a well-rounded background of school administrative experience to GEMCOR. Prior to becoming a GEMCOR associate, she spent ten years as a financial aid director of a FSA eligible school in northern Illinois. But as is the case at many small schools, her duties did not stop there as she also balanced her time with being an administrator and instructor. Having been on the receiving end of accreditation reviews and site visits, she brings that unique experience to the table as well.</p>
+                  <p>Her primary responsibilities at GEMCOR include federal grant award processing, Sharefile document management, confirmation of eligibility file reviews, and she also often assists with fund reconciliation in the Accounting Department.</p>
+                  <p>Phone: 1-888-GEMCOR-8 ext: 232<br>Email: <a href="mailto:niki@gemcorinc.com" class="text-dark">niki@gemcorinc.com</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct Loan Operators -->
+        <div id="loans" class="staff-section d-none">
+          <h2>Direct Loan Operators</h2>
+          <ul class="nav nav-tabs mb-3" role="tablist">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#megan2-tab">Megan Refness</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#michele-tab">Michele Campbell</button></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="megan2-tab">
+              <div class="profile-card d-flex align-items-center">
+                <img src="Pics\Megan.jpg" alt="Megan Refness" class="profile-img me-4">
+                <div>
+                  <h3>Megan Refness - Director of Federal Direct Student Loan</h3>
+                  <p><strong>Megan Refness</strong> — As is the case with many of us, Megan began working in the industry with a limited knowledge of the administrative requirements involved in the federal student financial aid environment. Megan joined GEMCOR in 2005 as an administrative assistant and quickly developed the skills and knowledge to elevate her job responsibilities into that of a staff loan processor. Throughout the ensuing several years, Megan expanded her understanding of the statutes, regulations, and requirements regarding the federal student loan programs.</p>
+                  <p>In 2010, lenders and guarantee agencies were eliminated from the federal student loan industry through federal legislation. Subsequent to that was the massive expansion of the Federal Direct Student Loan program (FDSL). Immediately, Megan welcomed the opportunity to manage this expanding department within GEMCOR. Currently, Megan and her FDSL department staff process and manage student loan volume of approximately $100 million annually, as well as providing client training and support. Her now longtime experience in the world of federal aid administration along with her teamwork mentality in any other area of client services, make her a trusted and respected associate in the eyes of all of our clients.</p>
+                  <p>Phone: 1-888-GEMCOR-8 ext: 225<br>Email: <a href="mailto:megan@gemcorinc.com" class="text-dark"> megan@gemcorinc.com</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="michele-tab">
+              <div class="profile-card d-flex align-items-center">
+                <img src="Pics\Michele.jpg" alt="Michele Campbell" class="profile-img me-4">
+                <div>
+                  <h3>Michele Campbell - Federal Direct Student Loan</h3>
+                  <p><strong>Michele Campbell</strong> — Michele joined GEMCOR as an Administrative Assistant in March 2009 when her primary duties involved daily data processing and general office support. In 2010, after Congress eliminated the FFEL program in favor of Direct Loans, she shared time as an administrator in general operations as well as in the newly formed FDSL Department at GEMCOR. Volume quickly grew and before long she spent all of her time and effort assisting clients in the transition to the expanding Federal Direct Student Loan program.</p>
+                  <p>Today, Michele is a Senior Loan Operator overseeing the daily processing of FDSL loan awards from GEMCOR client institutions. Her now vast knowledge of the FDSL program affords her the ability to assist clients in virtually any area involving student eligibility for Federal Direct Student Loans. Michele and Megan combine to offer the best possible management of your FDSL program activity.</p>
+                  <p>Phone: 1-888-GEMCOR-8 ext: 229<br>Email: <a href="mailto:michele@gemcorinc.com" class="text-dark">michele@gemcorinc.com</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- COMPLIANCE -->
+        <div id="compliance" class="staff-section d-none">
+          <h2>Compliance</h2>
+          <ul class="nav nav-tabs mb-3" role="tablist">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#jacki-tab">Jacki Griffin</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#sue-tab">Sue Berry</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#niki2-tab">Niki Mazur</button></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="jacki-tab">
+              <div class="profile-card d-flex align-items-center">
+                <img src="Pics\jacki.jpg" alt="Jacki Griffin" class="profile-img me-4">
+                <div>
+                  <h3>Jacki Griffin - Verification</h3>
+                  <p><strong>Jacki Griffin</strong> — has been involved with federal aid administration at GEMCOR since 2010, and has become the most trusted and reliable source there is for verification and C code compliance matters. Her service to our clients through the Compliance Department includes daily examination of verification and C code related student eligibility issues. Her experience is also a value regarding cases of professional judgment, dependency overrides, and proof of high school graduation. Jacki is your #1 go-to for pre-packaging guidance and professional support in the areas of FAFSAs, ISIR corrections, and many issues surrounding file compliance.</p>
+                  <p>Phone: 1-888-GEMCOR-8 ext: 224<br>Email: <a href="mailto:jacki@gemcorinc.com" class="text-dark">jacki@gemcorinc.com</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="sue-tab">
+              <div class="profile-card d-flex align-items-center">
+                <img src="Pics\Sue.jpg" alt="Sue Berry" class="profile-img me-4">
+                <div>
+                  <h3>Sue Berry - Administrative Assistant</h3>
+                  <p><strong>Sue Berry</strong> — began her career in FSA administration in 2011. In the unique industry that is FSA administration, your job duties evolve with your skills and experience. Sue's skills at program management, organization, and professionalism are equally matched by her patience and compassion helping clients through a number of painstaking obligations. As a Compliance Officer at GEMCOR, her primary responsibilities include periodic file reviews to confirm student eligibility for FSA funds based on documents provided to GEMCOR by the schools.</p>
+                  <p>Together, with the school's input, Sue can help provide a higher level of assurance that on-campus functions are being performed in a compliant manner. In other student file related matters, Sue provides support with verification and C code reviews and approvals, and technical support regarding Sharefile secure document portal functionality. Sue is also the lead go to person regarding NSLDS reporting. She routinely assist clients in the timely and accurate updating of the bi-monthly reports for the National Student Loan Data System (NSLDS) formerly the student status confirmation report (SSCR). This national database must be accurate to stay in compliance with Title IV Program participation. NSLDS provides a centralized, integrated view of Title IV loans and grants during their complete life cycle, from aid approval through disbursement, repayment, deferment, delinquency, and closure, and Sue is an expert NSLDS navigator.</p>
+                  <p>Phone: 1-888-GEMCOR-8 ext: 231<br>Email: <a href="mailto:sue@gemcorinc.com" class="text-dark">sue@gemcorinc.com</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="niki2-tab">
+              <div class="profile-card d-flex align-items-center">
+                <img src="Pics\Niki.jpg" alt="Niki Mazur" class="profile-img me-4">
+                <div>
+                  <h3>Niki Mazur - Administrative Assistant</h3>
+                  <p><strong>Niki Mazur</strong> — brings a well-rounded background of school administrative experience to GEMCOR. Prior to becoming a GEMCOR associate, she spent ten years as a financial aid director of a FSA eligible school in northern Illinois. But as is the case at many small schools, her duties did not stop there as she also balanced her time with being an administrator and instructor. Having been on the receiving end of accreditation reviews and site visits, she brings that unique experience to the table as well.</p>
+                  <p>Her primary responsibilities at GEMCOR include federal grant award processing, Sharefile document management, confirmation of eligibility file reviews, and she also often assists with fund reconciliation in the Accounting Department.</p>
+                  <p>Phone: 1-888-GEMCOR-8 ext: 232<br>Email: <a href="mailto:niki@gemcorinc.com" class="text-dark">niki@gemcorinc.com</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cash Management -->
+        <div id="cash" class="staff-section d-none">
+          <h2>Cash Management</h2>
+          <ul class="nav nav-tabs mb-3" role="tablist">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#carri-tab">Carri Van Buskirk</button></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="carri-tab">
+              <div class="profile-card d-flex align-items-center">
+                <img src="Pics\Carri.jpg" alt="Carri Van Buskirk" class="profile-img me-4">
+                <div>
+                  <h5>Carri Van Buskirk - Cash Management</h5>
+                  <p><strong>Carri Van Buskirk</strong> — has a bachelor's degree in business administration from St. Xavier University in Illinois and started working for GEMCOR in 2010 with a diverse background for customer service and computer systems. She is responsible for the day-to-day G5/cash drawdown request, refunds, return of cash on hand reporting, and troubleshooting G5 for clients. Carri proofs and trains clients for their return of Title IV funds worksheets (R2T4). She processes reconciliations monthly for all clients on their federal funds bank accounts and any necessary changes that need to be made to those accounts via G5.</p>
+                  <p>Carri helps with new client G5 user access and G5 federal funds bank account additions. If assistance is needed during a client audit, Carri can provide general audit/program review support.</p>
+                  <p>Phone: 1-888-GEMCOR-8 ext: 226<br>Email: <a href="mailto:carri@gemcorinc.com" class="text-dark">carri@gemcorinc.com</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technology -->
+        <div id="tech" class="staff-section d-none">
+          <h2>Technology</h2>
+          <ul class="nav nav-tabs mb-3" role="tablist">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#laurie2-tab">Laurie Westberg</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#terrah-tab">Terrah Griffin</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tyler-tab">Tyler Westberg</button></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="laurie2-tab">
+              <div class="profile-card d-flex align-items-center">
+                <img src="Pics\Laurie.jpg" alt="Laurie Westberg" class="profile-img me-4">
+                <div>
+                  <h3>Laurie Westberg - Chief Information Officer</h3>
+                  <p><strong>Laurie Westberg</strong> — Information Technology and Computer Operations are the life blood of most companies, and Laurie Westberg is our doctor! Laurie began writing code for GEMCOR in 1996, and today she functions as the company’s Chief Information Officer with a Master's degree in computer science from Governors State University. She was largely responsible for transitioning the company to full automation during her tenure at GEMCOR. She provides daily oversight of all computer operations and systems involved with our TEAM and Trax Software Applications.</p>
+                  <p>In addition to her programming skills and website development and maintenance responsibilities, Laurie also manages all hardware systems, phone systems, remote accessibility, and data backup and security operations. Highly experienced in VB, .NET, and C++, Laurie’s been an “A+” asset to GEMCOR from day one. Laurie is committed to making sure everyone is functionally "Having a Great Day at GEMCOR" every day!</p>
+                  <p>Phone: 1-888-GEMCOR-8 ext: 223<br>Email: <a href="mailto:laurie@gemcorinc.com" class="text-dark">laurie@gemcorinc.com</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="terrah-tab">
+              <div class="profile-card d-flex align-items-center">
+                <img src="Pics\Terrah.jpg" alt="Terrah Griffin" class="profile-img me-4">
+                <div>
+                  <h3>Terrah Griffin - Information Technology & Computer Operations</h3>
+                  <p><strong>Terrah Griffin</strong> — joined GEMCOR in 2010 while completing her bachelor's degree requirements at St. Xavier University in Illinois. As an associate in the Computer Operations and IT Department, Terrah's responsibilities include maintenance of in-house computer applications, client support regarding Trax and TEAM software systems, TEAM user maintenance, email distribution list management, and ShareFile support and user maintenance. Terrah is also responsible for the annual preparation and e-filing of 1098-T data.</p>
+                  <p>On a daily basis, Terrah manages all ISIR and XML/COD data exchanges with the Department of Education. She also works in conjunction with IT Department Director, Laurie Westberg on GEMCOR's website, data backup and security, and domain management.</p>
+                  <p>Phone: 1-888-GEMCOR-8 ext: 228<br>Email: <a href="mailto:terrah@gemcorinc.com" class="text-dark">terrah@gemcorinc.com</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tyler-tab">
+              <div class="profile-card d-flex align-items-center">
+                <img src="Pics\Tyler.jpg" alt="Tyler Westberg" class="profile-img me-4">
+                <div>
+                <h3>Tyler Westberg -  Information Technology Programming Staff</h3>
+                <p><strong>Tyler Westberg</strong> — Tyler joined GEMCOR in 2024 while completing his bachelor's degree requirements. As an associate in the Computer Operations and IT Department, Tyler's responsibilities include maintenance of in-house computer applications, TEAM user maintenance, email distribution list management, and ShareFile support and user maintenance.</p>
+                <p>On a daily basis, Tyler contributes to GEMCOR's in-house programming updates and maintenance. He works in conjunction with the IT Department Director, Laurie Westberg, and Information Systems & Technologies officer Terrah Griffin.</p>
+                <p>Phone: 1-888-GEMCOR-8<br>Email: <a href="mailto:tyler@gemcorinc.com" class="text-dark">tyler@gemcorinc.com</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </main>
+    </div>
+  </div>
 
-    <footer class="bg-dark text-white text-center py-3">
-      <p>© 2025 GEMCOR, Inc. All rights reserved.</p>
-      <p>1005 Internationale Pkwy Suite 204, Woodridge, IL 60517</p>
-      <p>1-888-GEMCOR-8</p>
-    </footer>
+  <footer class="footer-custom text-white py-5">
+    <div class="container">
+      <div class="row align-items-start">
+        
+        <!-- Left Side: Company Info -->
+        <div class="col-md-6 text-md-start text-center mb-4 mb-md-0">
+          <p class="mb-1">&copy; 2025 GEMCOR, Inc. All rights reserved.</p>
+          <p class="mb-1">1005 Internationale Pkwy Suite 204, Woodridge, IL 60517</p>
+          <p class="mb-0">1-888-GEMCOR-8</p>
+        </div>
 
-    <script>
-      function showSection(id) {
-        const sections = ['president', 'directors', 'grants', 'loans', 'compliance', 'cash', 'tech'];
-        sections.forEach(section => {
-          const el = document.getElementById(section);
-          if (el) el.style.display = 'none';
-        });
-        const target = document.getElementById(id);
-        if (target) target.style.display = 'block';
-      }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+        <!-- Right Side: Nav Links in Two Columns -->
+        <div class="col-md-6">
+          <div class="row">
+            <!-- First 5 links -->
+            <div class="col-6 text-md-end text-center">
+              <ul class="list-unstyled footer-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="staff.html">Meet Our Staff</a></li>
+                <li><a href="software.html">Software</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="testimonals.html">Client Testimonials</a></li>
+              </ul>
+            </div>
+            <!-- Last 4 links -->
+            <div class="col-6 text-md-start text-center">
+              <ul class="list-unstyled footer-nav">
+                <li><a href="links.html">Links</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://auth.sharefile.io/gemcorinc/login..." target="_blank">ShareFile</a></li>
+                <li><a href="https://team.gemcorinc.com/" target="_blank">TEAM Web</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.staff-section').forEach(section => section.classList.add('d-none'));
+      document.getElementById(id).classList.remove('d-none');
+      document.querySelectorAll('.list-group-item').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

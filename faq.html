@@ -5,48 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAQ</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header style="background-color: #771914;" class="text-center py-3">
-    <img src="GemcorLogoAndNumber.png" alt="GEMCOR Logo" style="max-height: 150px;" />
-    <!-- <h3 class="text-white mt-2 mb-0">Federal Student Aid Administration Services</h3> -->
-  </header>  
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img src="GEMCOR_LogoAndNameOnly.png" alt="GEMCOR Logo" style="height: 40px;">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="staff.html">Meet Our Staff</a></li>
-          <li class="nav-item"><a class="nav-link" href="webinars.html">Webinars</a></li>
-          <li class="nav-item"><a class="nav-link" href="software.html">Software</a></li>
-          <li class="nav-item"><a class="nav-link" href="downloads.html">Downloads</a></li>
-          <li class="nav-item"><a class="nav-link" href="links.html">Links</a></li>
-          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://auth.sharefile.io/gemcorinc/login..." target="_blank">ShareFile</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://team.gemcorinc.com/" target="_blank">TEAM Web</a></li>
-        </ul>
-      </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom d-flex justify-content-center nav-center">
+    <a class="navbar-brand mb-3" href="index.html">
+      <img src="Pics/GemcorLogoAndNumber.png" alt="GEMCOR Logo" style="max-height: 100px;">
+    </a>
+    <div class="collapse navbar-collapse show justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="staff.html">Meet Our Staff</a></li>
+        <li class="nav-item"><a class="nav-link" href="testimonals.html">Client Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="software.html">Software</a></li>
+        <li class="nav-item"><a class="nav-link" href="downloads.html">Downloads</a></li>
+        <li class="nav-item"><a class="nav-link" href="links.html">Links</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://auth.sharefile.io/gemcorinc/login..." target="_blank">ShareFile</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://team.gemcorinc.com/" target="_blank">TEAM Web</a></li>
+      </ul>
     </div>
   </nav>
-  
-  
+
   <main class="container my-5">
     <h2>FAQ</h2>
     <p>Content coming soon...</p>
   </main>
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2025 GEMCOR, Inc. All rights reserved.</p>
-    <p>1005 Internationale Pkwy Suite 204, Woodridge, IL 60517</p>
-    <p>1-888-GEMCOR-8</p>
+
+  <footer class="footer-custom text-white py-5">
+    <div class="container">
+      <div class="row align-items-start">
+        
+        <!-- Left Side: Company Info -->
+        <div class="col-md-6 text-md-start text-center mb-4 mb-md-0">
+          <p class="mb-1">&copy; 2025 GEMCOR, Inc. All rights reserved.</p>
+          <p class="mb-1">1005 Internationale Pkwy Suite 204, Woodridge, IL 60517</p>
+          <p class="mb-0">1-888-GEMCOR-8</p>
+        </div>
+
+        <!-- Right Side: Nav Links in Two Columns -->
+        <div class="col-md-6">
+          <div class="row">
+            <!-- First 5 links -->
+            <div class="col-6 text-md-end text-center">
+              <ul class="list-unstyled footer-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="staff.html">Meet Our Staff</a></li>
+                <li><a href="software.html">Software</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="testimonals.html">Client Testimonials</a></li>
+              </ul>
+            </div>
+            <!-- Last 5 links -->
+            <div class="col-6 text-md-start text-center">
+              <ul class="list-unstyled footer-nav">
+                <li><a href="links.html">Links</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://auth.sharefile.io/gemcorinc/login..." target="_blank">ShareFile</a></li>
+                <li><a href="https://team.gemcorinc.com/" target="_blank">TEAM Web</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
